@@ -12,8 +12,8 @@ EOT
   type = map(object({
     name      = string
     server_id = string
-    charset   = optional(string, "UTF8")
-    collation = optional(string, "en_US.utf8")
+    charset   = optional(string) # Default: "UTF8"
+    collation = optional(string) # Default: "en_US.utf8"
   }))
 }
 
