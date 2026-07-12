@@ -1,3 +1,7 @@
+output "postgresql_flexible_server_databases_id" {
+  description = "Map of id values across all postgresql_flexible_server_databases, keyed the same as var.postgresql_flexible_server_databases"
+  value       = { for k, v in azurerm_postgresql_flexible_server_database.postgresql_flexible_server_databases : k => v.id }
+}
 output "postgresql_flexible_server_databases_charset" {
   description = "Map of charset values across all postgresql_flexible_server_databases, keyed the same as var.postgresql_flexible_server_databases"
   value       = { for k, v in azurerm_postgresql_flexible_server_database.postgresql_flexible_server_databases : k => v.charset }
