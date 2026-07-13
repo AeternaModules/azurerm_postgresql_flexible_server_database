@@ -12,8 +12,8 @@ EOT
   type = map(object({
     name      = string
     server_id = string
-    charset   = optional(string) # Default: "UTF8"
-    collation = optional(string) # Default: "en_US.utf8"
+    charset   = optional(string)
+    collation = optional(string)
   }))
   # --- Unconfirmed validation candidates, derived from azurerm_postgresql_flexible_server_database's provider source ---
   # Not auto-enabled: either a bespoke provider validator we can't safely translate,
